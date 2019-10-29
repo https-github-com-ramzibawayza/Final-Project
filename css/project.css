@@ -1,0 +1,14 @@
+body {
+    text-align: center;
+    background:radial-gradient(#fcfafc,rgb(99, 48, 88)) fixed;
+  
+    text-align: center;  text-align: center;
+    background:radial-gradient(#fcfafc, rgb(99, 48, 88)) fixed;
+  
+    text-align: center;
+    font-family: 'Righteous', sans-serif;
+  }
+  
+  img { width: 30%;
+    height:30%; 
+ }

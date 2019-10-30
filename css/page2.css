@@ -2,6 +2,12 @@
       * element that contains the map. */
       #map {
         height: 100%;
+        width: 80%;
+        display: block;
+        margin: auto;
+        margin-bottom: 50px;
+        margin-top: 50px;
+
       }
       /* Optional: Makes the sample page fill the window. */
       html, body {
@@ -13,44 +19,30 @@
     body {
         background:radial-gradient(#f5f5f5, #fff) fixed;
         text-align: center;
-       font-family: 'Cookie', cursive;
+        font-family: 'Playfair Display', serif;
+        font-family: 'Domine', serif;
+        font-family: 'ZCOOL XiaoWei', serif;
       
       }
-      p {
-          font-size: 40px;
-          padding-top: 130px;}
-     
       
-      img{
-        max-width: 250px;
-        max-height: 250px;
-        border: 10px solid  #170a49;
-        border-radius: 5%;
-        margin-left: 50px;
-
-      }
-    
-        header {
+      header {
           height: 75px;
           z-index: 2;
-          border: 1px solid black;
           background-color: #170a49;
           width: 100%;
           position: fixed;
-          margin-top: -40px;
-
-        
+          margin-top: -60px;
+          
+          
         }
         footer{
-          height: 75px;
           z-index: 2;
           border: 1px solid black;
-          padding: 25px 50px 75px 100px;
           background-color: #170a49;
-          width: 100%;
           color: #f5f5f5;
           font-size: 30px;
           width: 100%;
+          font-family: 'Great Vibes', cursive;
         }
         header ul {
           width: 1000px;
@@ -83,6 +75,22 @@
         .image{
           display: inline-block;
         }
+        
+        p {
+            font-size: 40px;
+            padding-top: 130px;}
+       
+        
+        img{
+          max-width: 250px;
+          max-height: 250px;
+          border: 10px solid  #170a49;
+          border-radius: 5%;
+          margin: 70px; 
+          cursor: pointer;
+          margin-top: 25px;
+          margin-bottom: 25px;
 
+        }
 
         

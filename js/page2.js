@@ -4,8 +4,6 @@ var answer = [];
 function Product(title, src) {
     this.title = title;
     this.src = src;
-    this.clickCtr = 0;
-    this.shownCtr = 0;
     Product.all.push(this);
 }
 Product.roundCtr = 0;
@@ -16,8 +14,7 @@ Product.leftImage = document.getElementById('left-image');
 Product.rightImage = document.getElementById('right-image');
 Product.leftTitle = document.getElementById('left-title');
 Product.rightTitle = document.getElementById('right-title');
-Product.leftObject = null;
-Product.rightObject = null;
+
 new Product('Large budget', 'image/security_cash_83077314.jpg');
 new Product('Low budget', 'image/money.jpg');
 new Product('Therapeutic areas', 'image/3e6213e99b60ecf9721fab409b4e5c6f.jpg');
@@ -66,7 +63,7 @@ function clickHandler(event) {
         Product.roundCtr++;
         if (Product.roundCtr === Product.roundLimit) {
             alert('Thanks. welcome to my webpage');
-            ahmad();
+            choice();
 
             google.maps.event.addDomListener(window, 'load', initialize);
             initialize();
@@ -84,7 +81,7 @@ Product.container.addEventListener('click', clickHandler);
 renderNewProduct();
 
 var coords = [];
-function ahmad(){
+function choice(){
 if (answer[0] === "yes" &&  answer[1] === "yes" && answer[2] === "yes") {
     coords.push({lat: 31.561329, lng: 35.493861});
     coords.push({lat: 29.552267, lng: 35.106759});
@@ -140,17 +137,15 @@ if (answer[0] === "yes" &&  answer[1] === "yes" && answer[2] === "yes") {
 var map;
 function initialize() {
   var mapOptions = {
-    zoom: 7,
-    center: coords[1],
+    zoom: 7.5,
+    center: {lat: 31.125604, lng: 36.254896},
   };
   map = new google.maps.Map(document.getElementById('map'), mapOptions);
       
       for (let i = 0; i < coords.length; i++) {
       var marker = new google.maps.Marker({
           // The below line is equivalent to writing:
-          // position: new google.maps.LatLng(-34.397, 150.644)
             position: coords[i],
-            // position: coords[1],
             map: map
         });
         
@@ -161,13 +156,6 @@ function initialize() {
   // position will be available as a google.maps.LatLng object. In this case,
   // we retrieve the marker's position using the
   // google.maps.LatLng.getPosition() method.
-//   var infowindow = new google.maps.InfoWindow({
-//     content: '<p>Marker Location:' + marker.getPosition() + '</p>'
-//   });
 
-//   google.maps.event.addListener(marker, 'click', function() {
-//     infowindow.open(map, marker);
-//   });
 }
 
-// google.maps.event.addDomListener(window, 'load', initialize);

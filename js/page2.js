@@ -142,6 +142,11 @@ function initialize() {
   };
   map = new google.maps.Map(document.getElementById('map'), mapOptions);
       
+  // You can use a LatLng literal in place of a google.maps.LatLng object when
+  // creating the Marker object. Once the Marker object is instantiated, its
+  // position will be available as a google.maps.LatLng object. In this case,
+  // we retrieve the marker's position using the
+  // google.maps.LatLng.getPosition() method.
       for (let i = 0; i < coords.length; i++) {
       var marker = new google.maps.Marker({
           // The below line is equivalent to writing:
@@ -151,11 +156,6 @@ function initialize() {
         
     }
 
-  // You can use a LatLng literal in place of a google.maps.LatLng object when
-  // creating the Marker object. Once the Marker object is instantiated, its
-  // position will be available as a google.maps.LatLng object. In this case,
-  // we retrieve the marker's position using the
-  // google.maps.LatLng.getPosition() method.
 
 }
 
